@@ -1,3 +1,3 @@
-module Project10
+module Intellias
 
 go 1.18
