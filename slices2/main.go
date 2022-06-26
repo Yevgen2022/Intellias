@@ -1,16 +1,15 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	task1()
+	result := task1([]int{3, 4, 4, 3, 6, 3})
+	fmt.Println("Це перший слайс без дублікатів: ", result)
+
 	task2()
 }
 
-func task1() {
-	mySlice := []int{3, 4, 4, 3, 6, 3}
+func task1(mySlice []int) []int {
 	var result []int
 	duplicates := make(map[int]bool)
 
@@ -24,7 +23,7 @@ func task1() {
 		duplicates[v] = true
 	}
 
-	fmt.Println("Це перший слайс без дублікатів: ", result)
+	return result
 }
 
 func task2() {
